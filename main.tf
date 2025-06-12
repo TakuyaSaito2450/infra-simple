@@ -114,7 +114,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 #------------------------
-# EC2 Instance
+# EC2 Instance (1台目)
 #------------------------
 resource "aws_instance" "web" {
   ami           = "ami-0c3fd0f5d33134a76" # Amazon Linux 2（東京リージョン）
@@ -134,6 +134,29 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "${var.project_name}-ec2"
+  }
+}
+#------------------------
+# EC2 Instance (2台目)
+#------------------------
+resource "aws_instance" "web_2" {
+  ami                         = "ami-0c3fd0f5d33134a76"
+  instance_type               = "t2.micro"
+  subnet_id                   = aws_subnet.public_2.id
+  key_name                    = var.key_name
+  vpc_security_group_ids      = [aws_security_group.web_sg.id]
+  associate_public_ip_address = true
+
+  user_data = <<-EOF
+              #!/bin/bash
+              yum update -y
+              amazon-linux-extras install nginx1 -y
+              systemctl start nginx
+              systemctl enable nginx
+              EOF
+
+  tags = {
+    Name = "${var.project_name}-ec2-2"
   }
 }
 
