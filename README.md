@@ -54,6 +54,7 @@ AWS Infrastructure with Terraform
 
 # 3. aws_instance.web will be createdt
 以下は、 `aws_instance.web` リソース（EC2 インスタンス）を新たに作成する予定であることがわかります。
+
 ![terraform init](./images/terraform-init-output-03.png)
 
 
