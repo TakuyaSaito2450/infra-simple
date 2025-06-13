@@ -52,79 +52,8 @@ AWS Infrastructure with Terraform
 
 ![terraform init](./images/terraform-init-output-02.png)
 
-    aws_instance.web will be created
-  + resource "aws_instance" "web" {
-      + ami                                  = "ami-0c3fd0f5d33134a76"
-      + arn                                  = (known after apply)
-      + associate_public_ip_address          = true
-      + availability_zone                    = (known after apply)
-      + cpu_core_count                       = (known after apply)
-      + cpu_threads_per_core                 = (known after apply)
-      + disable_api_stop                     = (known after apply)
-      + disable_api_termination              = (known after apply)
-      + ebs_optimized                        = (known after apply)
-      + enable_primary_ipv6                  = (known after apply)
-      + get_password_data                    = false
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      + id                                   = (known after apply)
-      + instance_initiated_shutdown_behavior = (known after apply)
-      + instance_lifecycle                   = (known after apply)
-      + instance_state                       = (known after apply)
-      + instance_type                        = "t2.micro"
-      + ipv6_address_count                   = (known after apply)
-      + ipv6_addresses                       = (known after apply)
-      + key_name                             = (known after apply)
-      + monitoring                           = (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
-      + placement_partition_number           = (known after apply)
-      + primary_network_interface_id         = (known after apply)
-      + private_dns                          = (known after apply)
-      + private_ip                           = (known after apply)
-      + public_dns                           = (known after apply)
-      + public_ip                            = (known after apply)
-      + secondary_private_ips                = (known after apply)
-      + security_groups                      = (known after apply)
-      + source_dest_check                    = true
-      + spot_instance_request_id             = (known after apply)
-      + subnet_id                            = (known after apply)
-      + tags                                 = {
-          + "Name" = "sre-demo-ec2"
-        }
-      + tags_all                             = {
-          + "Name" = "sre-demo-ec2"
-        }
-      + tenancy                              = (known after apply)
-      + user_data                            = "b7ae7d432513168fe0310c5e3e57307300749c5a"
-      + user_data_base64                     = (known after apply)
-      + user_data_replace_on_change          = false
-      + vpc_security_group_ids               = (known after apply)
-
-      + capacity_reservation_specification (known after apply)
-
-      + cpu_options (known after apply)
-
-      + ebs_block_device (known after apply)
-
-      + enclave_options (known after apply)
-
-      + ephemeral_block_device (known after apply)
-
-      + instance_market_options (known after apply)
-
-      + maintenance_options (known after apply)
-
-      + metadata_options (known after apply)
-
-      + network_interface (known after apply)
-
-      + private_dns_name_options (known after apply)
-
-      + root_block_device (known after apply)
-    }
+# 3. aws_instance.web will be createdt
+以下は、 `aws_instance.web` リソース（EC2 インスタンス）を新たに作成する予定であることがわかります。
 
     aws_instance.web_2 will be created
   + resource "aws_instance" "web_2" {
