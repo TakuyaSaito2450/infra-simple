@@ -47,18 +47,8 @@ AWS Infrastructure with Terraform
 
 # 2. terraform plan
 以下は `terraform plan` を実行した際の出力結果です。Terraform が作成しようとしているリソース（差分）が表示されています。
-TakuyanoMacBook-Air:infra-simple saitoutakuya$ terraform plan
-var.key_name
-  your-key-name
+![terraform init](./images/Screenshot 0007-06-13 at 22.47.09.png)
 
-  Enter a value: 
-
-
-Terraform used the selected providers to generate the following execution plan. Resource actions are
-indicated with the following symbols:
-  + create
-
-Terraform will perform the following actions:
 
     aws_instance.web will be created
   + resource "aws_instance" "web" {
