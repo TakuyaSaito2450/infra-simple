@@ -47,8 +47,7 @@ AWS Infrastructure with Terraform
 
 # 2. terraform plan
 以下は `terraform plan` を実行した際の出力結果です。Terraform が作成しようとしているリソース（差分）が表示されています。
-![terraform init](./images/Screenshot 0007-06-13 at 22.47.09.png)
-
+![terraform init](./images/terraform-init-output-02.png)
 
     aws_instance.web will be created
   + resource "aws_instance" "web" {
