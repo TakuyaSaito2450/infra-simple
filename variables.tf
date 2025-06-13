@@ -17,6 +17,6 @@ variable "vpc_cidr" {
 }
 
 variable "key_name" {
-  description = "EC2インスタンスに使うSSHキーペア名"
+  description = "your-key-name"
   type        = string
 }
