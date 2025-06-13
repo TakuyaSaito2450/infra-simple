@@ -73,20 +73,12 @@ AWS Infrastructure with Terraform
 
 ![terraform plan output for web_2](./images/terraform-plan-web2.png)
 
-# 5. aws_instance.web_2 will be created
+# 5. aws_internet_gateway.igw will be created
+以下は、 VPC に紐づくインターネットゲートウェイ `aws_internet_gateway.igw` が作成される予定です。
+主な構成：
+- タグ: Name = "sre-demo-igw"
+- 紐づく VPC: apply 後に決定（`vpc_id = (known after apply)`）
 
-  + resource "aws_internet_gateway" "igw" {
-      + arn      = (known after apply)
-      + id       = (known after apply)
-      + owner_id = (known after apply)
-      + tags     = {
-          + "Name" = "sre-demo-igw"
-        }
-      + tags_all = {
-          + "Name" = "sre-demo-igw"
-        }
-      + vpc_id   = (known after apply)
-    }
 
     aws_lb.web_alb will be created
   + resource "aws_lb" "web_alb" {
