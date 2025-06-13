@@ -553,12 +553,3 @@ these actions if you run "terraform apply" now.
 terraform apply
 
 # 4. 出力されたALBのDNS名にアクセス
-
-
-# 2. terraform plan
-terraform plan
-
-# 3. terraform apply
-terraform apply
-
-# 4. 出力されたALBのDNS名にアクセス
