@@ -48,7 +48,22 @@ terraform init
 
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
 
+# 1. terraform init
+terraform init
+## 🛠️ terraform init 実行結果
+
+以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
+
 ![terraform init](./images/terraform-init-output.png)
+
+
+# 2. terraform plan
+terraform plan
+
+# 3. terraform apply
+terraform apply
+
+# 4. 出力されたALBのDNS名にアクセス
 
 
 # 2. terraform plan
