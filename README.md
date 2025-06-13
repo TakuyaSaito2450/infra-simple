@@ -16,7 +16,7 @@ AWS Infrastructure with Terraform
 
 ---
 
-## 🧱 インフラ構成
+## インフラ構成
 
 | リソース | 内容 |
 |----------|------|
@@ -30,7 +30,7 @@ AWS Infrastructure with Terraform
 
 ---
 
-## 🔧 使用技術
+## 使用技術
 
 - Terraform v1.x
 - AWS EC2 / VPC / ALB / SG など
@@ -39,7 +39,7 @@ AWS Infrastructure with Terraform
 
 ---
 
-## 🚀 デプロイ手順
+## デプロイ手順
 
 ```bash
 # 1. terraform init
