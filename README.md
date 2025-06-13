@@ -64,7 +64,9 @@ AWS Infrastructure with Terraform
 - インスタンスタイプ: t2.micro
 - パブリックIP: 自動割り当て
 - タグ: Name = sre-demo-ec2-2
-- 
+
+![terraform plan output for web_2](./images/terraform-plan-web2.png)
+
   + resource "aws_instance" "web_2" {
       + ami                                  = "ami-0c3fd0f5d33134a76"
       + arn                                  = (known after apply)
