@@ -60,7 +60,7 @@ indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # aws_instance.web will be created
+    aws_instance.web will be created
   + resource "aws_instance" "web" {
       + ami                                  = "ami-0c3fd0f5d33134a76"
       + arn                                  = (known after apply)
@@ -134,7 +134,7 @@ Terraform will perform the following actions:
       + root_block_device (known after apply)
     }
 
-  # aws_instance.web_2 will be created
+    aws_instance.web_2 will be created
   + resource "aws_instance" "web_2" {
       + ami                                  = "ami-0c3fd0f5d33134a76"
       + arn                                  = (known after apply)
@@ -208,7 +208,7 @@ Terraform will perform the following actions:
       + root_block_device (known after apply)
     }
 
-  # aws_internet_gateway.igw will be created
+    aws_internet_gateway.igw will be created
   + resource "aws_internet_gateway" "igw" {
       + arn      = (known after apply)
       + id       = (known after apply)
@@ -222,7 +222,7 @@ Terraform will perform the following actions:
       + vpc_id   = (known after apply)
     }
 
-  # aws_lb.web_alb will be created
+    aws_lb.web_alb will be created
   + resource "aws_lb" "web_alb" {
       + arn                                                          = (known after apply)
       + arn_suffix                                                   = (known after apply)
@@ -260,7 +260,7 @@ Terraform will perform the following actions:
       + subnet_mapping (known after apply)
     }
 
-  # aws_lb_listener.web_listener will be created
+    aws_lb_listener.web_listener will be created
   + resource "aws_lb_listener" "web_listener" {
       + arn                                                                   = (known after apply)
       + id                                                                    = (known after apply)
@@ -299,7 +299,7 @@ Terraform will perform the following actions:
       + mutual_authentication (known after apply)
     }
 
-  # aws_lb_target_group.web_tg will be created
+    aws_lb_target_group.web_tg will be created
   + resource "aws_lb_target_group" "web_tg" {
       + arn                                = (known after apply)
       + arn_suffix                         = (known after apply)
@@ -350,7 +350,7 @@ Terraform will perform the following actions:
       + target_health_state (known after apply)
     }
 
-  # aws_lb_target_group_attachment.web_2_attach will be created
+    aws_lb_target_group_attachment.web_2_attach will be created
   + resource "aws_lb_target_group_attachment" "web_2_attach" {
       + id               = (known after apply)
       + port             = 80
@@ -358,7 +358,7 @@ Terraform will perform the following actions:
       + target_id        = (known after apply)
     }
 
-  # aws_lb_target_group_attachment.web_attach will be created
+    aws_lb_target_group_attachment.web_attach will be created
   + resource "aws_lb_target_group_attachment" "web_attach" {
       + id               = (known after apply)
       + port             = 80
@@ -366,7 +366,7 @@ Terraform will perform the following actions:
       + target_id        = (known after apply)
     }
 
-  # aws_route_table.public will be created
+    aws_route_table.public will be created
   + resource "aws_route_table" "public" {
       + arn              = (known after apply)
       + id               = (known after apply)
@@ -388,21 +388,21 @@ Terraform will perform the following actions:
       + vpc_id           = (known after apply)
     }
 
-  # aws_route_table_association.public_1 will be created
+    aws_route_table_association.public_1 will be created
   + resource "aws_route_table_association" "public_1" {
       + id             = (known after apply)
       + route_table_id = (known after apply)
       + subnet_id      = (known after apply)
     }
 
-  # aws_route_table_association.public_2 will be created
+    aws_route_table_association.public_2 will be created
   + resource "aws_route_table_association" "public_2" {
       + id             = (known after apply)
       + route_table_id = (known after apply)
       + subnet_id      = (known after apply)
     }
 
-  # aws_security_group.web_sg will be created
+    aws_security_group.web_sg will be created
   + resource "aws_security_group" "web_sg" {
       + arn                    = (known after apply)
       + description            = "Managed by Terraform"
@@ -434,7 +434,7 @@ Terraform will perform the following actions:
               + security_groups  = []
               + self             = false
               + to_port          = 22
-                # (1 unchanged attribute hidden)
+                  (1 unchanged attribute hidden)
             },
           + {
               + cidr_blocks      = [
@@ -447,7 +447,7 @@ Terraform will perform the following actions:
               + security_groups  = []
               + self             = false
               + to_port          = 80
-                # (1 unchanged attribute hidden)
+                  (1 unchanged attribute hidden)
             },
         ]
       + name                   = "sre-demo-web-sg"
@@ -463,7 +463,7 @@ Terraform will perform the following actions:
       + vpc_id                 = (known after apply)
     }
 
-  # aws_subnet.public_1 will be created
+    aws_subnet.public_1 will be created
   + resource "aws_subnet" "public_1" {
       + arn                                            = (known after apply)
       + assign_ipv6_address_on_creation                = false
@@ -488,7 +488,7 @@ Terraform will perform the following actions:
       + vpc_id                                         = (known after apply)
     }
 
-  # aws_subnet.public_2 will be created
+    aws_subnet.public_2 will be created
   + resource "aws_subnet" "public_2" {
       + arn                                            = (known after apply)
       + assign_ipv6_address_on_creation                = false
@@ -513,7 +513,7 @@ Terraform will perform the following actions:
       + vpc_id                                         = (known after apply)
     }
 
-  # aws_vpc.main will be created
+    aws_vpc.main will be created
   + resource "aws_vpc" "main" {
       + arn                                  = (known after apply)
       + cidr_block                           = "10.0.0.0/16"
