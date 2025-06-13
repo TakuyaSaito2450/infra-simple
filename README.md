@@ -41,7 +41,7 @@ AWS Infrastructure with Terraform
 
 ## デプロイ手順
 
-```bash
+``bash
 # 1. terraform init
 terraform init
 ## 🛠️ terraform init 実行結果
