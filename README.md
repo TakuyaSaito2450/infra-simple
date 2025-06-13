@@ -46,7 +46,9 @@ AWS Infrastructure with Terraform
 
 
 # 2. terraform plan
-以下は `terraform plan` を実行した際の出力結果です。Terraform が作成しようとしているリソース（差分）が表示されています。
+以下は `terraform plan` を実行した際の出力結果です。キーペア名（`var.key_name`）を入力するプロンプトが表示されました。
+ここで、使用したい EC2 キーペア名（例：`my-ec2-key`）を入力すると、Terraform はリソース作成の計画を出力します。
+その後、表示される計画の一部です（`+ create` は作成予定のリソース）：
 ![terraform init](./images/terraform-init-output-02.png)
 
     aws_instance.web will be created
