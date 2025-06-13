@@ -40,12 +40,8 @@ AWS Infrastructure with Terraform
 ---
 
 ## デプロイ手順
-
-``bash
 # 1. terraform init
-terraform init
-## 🛠️ terraform init 実行結果
-
+terraform init 実行結果
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
 ![terraform init](./images/terraform-init-output.png)
 
