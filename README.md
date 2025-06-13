@@ -57,7 +57,7 @@ AWS Infrastructure with Terraform
 
 ![terraform init](./images/terraform-init-output-03.png)
 
-# 3. aws_instance.web_2 will be created
+# 4. aws_instance.web_2 will be created
 以下は、 `aws_instance.web_2` という名前の EC2 インスタンスが新たに作成されることが確認できます。
 主な構成は以下のとおりです：
 - AMI: ami-0c3fd0f5d33134a76
