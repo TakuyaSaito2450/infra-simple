@@ -75,6 +75,7 @@ AWS Infrastructure with Terraform
 
 # 5. aws_internet_gateway.igw will be created
 以下は、 VPC に紐づくインターネットゲートウェイ `aws_internet_gateway.igw` が作成される予定です。
+
 主な構成：
 - タグ: Name = "sre-demo-igw"
 - 紐づく VPC: apply 後に決定（`vpc_id = (known after apply)`）
