@@ -82,44 +82,19 @@ AWS Infrastructure with Terraform
 
 ![terraform plan output for igw](./images/terraform-plan-igw.png)
 
+ # 6. aws_lb.web_alb will be created
+以下は、Application Load Balancer（ALB）である `aws_lb.web_alb` が作成される予定です。
 
-    aws_lb.web_alb will be created
-  + resource "aws_lb" "web_alb" {
-      + arn                                                          = (known after apply)
-      + arn_suffix                                                   = (known after apply)
-      + client_keep_alive                                            = 3600
-      + desync_mitigation_mode                                       = "defensive"
-      + dns_name                                                     = (known after apply)
-      + drop_invalid_header_fields                                   = false
-      + enable_deletion_protection                                   = false
-      + enable_http2                                                 = true
-      + enable_tls_version_and_cipher_suite_headers                  = false
-      + enable_waf_fail_open                                         = false
-      + enable_xff_client_port                                       = false
-      + enable_zonal_shift                                           = false
-      + enforce_security_group_inbound_rules_on_private_link_traffic = (known after apply)
-      + id                                                           = (known after apply)
-      + idle_timeout                                                 = 60
-      + internal                                                     = false
-      + ip_address_type                                              = (known after apply)
-      + load_balancer_type                                           = "application"
-      + name                                                         = "sre-demo-alb"
-      + name_prefix                                                  = (known after apply)
-      + preserve_host_header                                         = false
-      + security_groups                                              = (known after apply)
-      + subnets                                                      = (known after apply)
-      + tags                                                         = {
-          + "Name" = "sre-demo-alb"
-        }
-      + tags_all                                                     = {
-          + "Name" = "sre-demo-alb"
-        }
-      + vpc_id                                                       = (known after apply)
-      + xff_header_processing_mode                                   = "append"
-      + zone_id                                                      = (known after apply)
+主な構成内容は以下の通りです：
+- 名前: `sre-demo-alb`
+- タイプ: `application`（アプリケーションロードバランサー）
+- HTTP/2 有効化: `true`
+- 内部向け: `false`（= インターネット向け）
+- タイムアウト: `60秒`
+- サブネット、セキュリティグループ、VPC などは apply 後に割り当てられます
+- タグ: `"Name" = "sre-demo-alb"`
 
-      + subnet_mapping (known after apply)
-    }
+
 
     aws_lb_listener.web_listener will be created
   + resource "aws_lb_listener" "web_listener" {
