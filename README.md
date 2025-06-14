@@ -86,6 +86,8 @@
 | 紐づくVPC | VPC IDは apply 後に自動設定されます |
 | タグ | Name = sre-demo-igw |
 
+
+
 ※より詳細な出力内容はこちらのファイルに保存しています：
 [plan-result.txt](./plan-result.txt)
 
