@@ -53,6 +53,7 @@ AWS Infrastructure with Terraform
 ![terraform init](./images/terraform-init-output-02.png)
 
 ※全出力は以下のファイルに記載しています。
+
 [plan-result.txt](./plan-result.txt)
 
 # 3. aws_instance.web will be createdt
