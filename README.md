@@ -78,7 +78,7 @@ AWS Infrastructure with Terraform
 
 主な構成：
 - タグ: Name = "sre-demo-igw"
-- 紐づく VPC: apply 後に決定（`vpc_id = (known after apply)`）
+- 紐づく VPC: apply 後に決定
 
 ![terraform plan output for igw](./images/terraform-plan-igw.png)
 
