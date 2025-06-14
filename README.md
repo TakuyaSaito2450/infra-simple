@@ -1,41 +1,39 @@
-# プロジェクト名
-AWS Infrastructure with Terraform
+# AWS Infrastructure with Terraform
 
 ## 概要
-このリポジトリは、Terraformを用いてAWS環境を自動構築するポートフォリオです。  
-主に以下の構成で、シンプルなWebサーバー環境（Nginx）をデプロイしています。
+このリポジトリは、Terraformを用いてAWS上にNginx Webサーバーを構築するポートフォリオです。IaCスキルとAWSの基本構成に関する理解をアピールする目的で作成しました。
 
--**目的**: IaCスキルとAWSネットワーク構成の理解を示すためのポートフォリオ
--**対象者**: SRE・インフラエンジニア職志望（障がい者雇用枠含む）
-
----
-
-## 構成図
+- **目的**: IaCスキルとAWSネットワーク構成の理解を示すためのポートフォリオ  
+- **対象者**: SRE・インフラエンジニア職志望（障がい者雇用枠含む）
 
 ---
 
 ## インフラ構成
 
-| リソース | 内容 |
-|----------|------|
-| VPC | カスタムVPC（CIDR: `10.0.0.0/16`） |
-| Subnet | Public Subnet × 2（AZ: `a`, `c`） |
-| Internet Gateway | パブリックサブネットに接続 |
-| Route Table | 0.0.0.0/0 向けにIGWルート設定 |
-| Security Group | HTTP(80), SSH(22) を許可 |
-| EC2 | Amazon Linux 2 / Nginx 起動スクリプト付 |
-| ALB | Public Subnet ×2 に配置。EC2をターゲット登録 |
+| リソース         | 内容                                       |
+|------------------|--------------------------------------------|
+| VPC              | カスタムVPC（CIDR: `10.0.0.0/16`）          |
+| Subnet           | パブリックサブネット ×2（AZ: `a`, `c`）     |
+| Internet Gateway | パブリックサブネットに接続                |
+| Route Table      | 0.0.0.0/0 向けのIGWルート設定              |
+| Security Group   | HTTP(80), SSH(22) を許可                   |
+| EC2              | Amazon Linux 2（Nginxインストール済み）    |
+| ALB              | パブリックサブネットに配置し、EC2を登録   |
 
 ---
 
 ## 使用技術
 
 - Terraform v1.x
-- AWS EC2 / VPC / ALB / SG など
+- AWS（EC2 / VPC / ALB / SG など）
 - Amazon Linux 2
 - Nginx
 
 ---
+
+## 図（構成図）
+※ ここに構成図があるとさらにわかりやすくなります（draw.ioやExcalidrawで作成可）
+
 
 ## デプロイ手順
 # 1. terraform init
