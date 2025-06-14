@@ -80,6 +80,8 @@ AWS Infrastructure with Terraform
 - タグ: Name = "sre-demo-igw"
 - 紐づく VPC: apply 後に決定（`vpc_id = (known after apply)`）
 
+![terraform plan output for igw](./images/terraform-plan-igw.png)
+
 
     aws_lb.web_alb will be created
   + resource "aws_lb" "web_alb" {
