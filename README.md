@@ -12,8 +12,6 @@ AWS Infrastructure with Terraform
 
 ## 構成図
 
-![Architecture](./images/architecture.png) <!-- 構成図ファイルへのパス -->
-
 ---
 
 ## インフラ構成
@@ -55,7 +53,7 @@ AWS Infrastructure with Terraform
 ※全出力は[plan-result.txt](./plan-result.txt)に記載しています。
 
 ## EC2インスタンス（aws_instance.web）
-Terraform により、以下の EC2 インスタンスが作成されます。
+以下の EC2 インスタンスが作成されます。
 
 | 項目 | 内容 |
 |------|------|
@@ -66,5 +64,29 @@ Terraform により、以下の EC2 インスタンスが作成されます。
 | セキュリティグループ | 別リソースにて定義し、アタッチ済み |
 | タグ | `Name = sre-demo-ec2` |
 | ユーザーデータ | 初期構成スクリプトを使用（Base64 形式でエンコード） |
+
+##  EC2インスタンス（aws_instance.web_2）
+以下の2台目の EC2 インスタンス（Webサーバ）が構築されます。
+
+| 項目 | 内容 |
+|------|------|
+| AMI | ami-0c3fd0f5d33134a76（Amazon Linux系） |
+| インスタンスタイプ | t2.micro（無料枠対象） |
+| キーペア名 | your-key-name（外部から `.tfvars` または `-var` で指定） |
+| パブリックIP | 自動割当（`associate_public_ip_address = true`） |
+| タグ | Name = sre-demo-ec2-2 |
+| ユーザーデータ | 起動時に自動実行される初期化スクリプト（Base64形式） |
+| セキュリティグループ | VPCの設定により適用（詳細は `vpc_security_group_ids` で指定） |
+| サブネット | 指定のVPCサブネットにアタッチされる（`subnet_id`） |
+
+## 🌐 インターネットゲートウェイ（aws_internet_gateway.igw）
+以下のインターネットゲートウェイ（IGW）が作成されます。
+
+| 項目 | 内容 |
+|------|------|
+| リソース名 | aws_internet_gateway.igw |
+| 用途 | パブリックサブネット内のEC2インスタンスがインターネットと通信できるようにするためのゲートウェイ |
+| 紐づくVPC | VPC IDは apply 後に自動設定されます |
+| タグ | Name = sre-demo-igw |
 
 # 3. 出力されたALBのDNS名にアクセス
