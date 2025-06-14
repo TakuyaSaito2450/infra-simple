@@ -52,9 +52,19 @@ AWS Infrastructure with Terraform
 
 ![terraform init](./images/terraform-init-output-02.png)
 
-※全出力は以下のファイルに記載しています。
+※全出力は[plan-result.txt](./plan-result.txt)に記載しています。
 
-[plan-result.txt](./plan-result.txt)
+## EC2インスタンス（aws_instance.web）
+Terraform により、以下の EC2 インスタンスが作成されます。
 
+| 項目 | 内容 |
+|------|------|
+| AMI | ami-0c3fd0f5d33134a76（Amazon Linux 系） |
+| インスタンスタイプ | t2.micro（無料利用枠相当） |
+| キーペア名 | your-key-name（変数として外部から指定） |
+| パブリック IP | 自動割り当て（`associate_public_ip_address = true`） |
+| セキュリティグループ | 別リソースにて定義し、アタッチ済み |
+| タグ | `Name = sre-demo-ec2` |
+| ユーザーデータ | 初期構成スクリプトを使用（Base64 形式でエンコード） |
 
 # 3. 出力されたALBのDNS名にアクセス
