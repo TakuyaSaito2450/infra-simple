@@ -48,8 +48,6 @@
 
 ![terraform init](./images/terraform-init-output-02.png)
 
-※より詳細な出力内容はこちらのファイルに保存しています：
-[plan-result.txt](./plan-result.txt)
 
 ## EC2インスタンス（aws_instance.web）
 以下の EC2 インスタンスが作成されます。
@@ -78,7 +76,7 @@
 | セキュリティグループ | VPCの設定により適用（詳細は `vpc_security_group_ids` で指定） |
 | サブネット | 指定のVPCサブネットにアタッチされる（`subnet_id`） |
 
-## 🌐 インターネットゲートウェイ（aws_internet_gateway.igw）
+## インターネットゲートウェイ（aws_internet_gateway.igw）
 以下のインターネットゲートウェイ（IGW）が作成されます。
 
 | 項目 | 内容 |
@@ -87,5 +85,8 @@
 | 用途 | パブリックサブネット内のEC2インスタンスがインターネットと通信できるようにするためのゲートウェイ |
 | 紐づくVPC | VPC IDは apply 後に自動設定されます |
 | タグ | Name = sre-demo-igw |
+
+※より詳細な出力内容はこちらのファイルに保存しています：
+[plan-result.txt](./plan-result.txt)
 
 # 3. 出力されたALBのDNS名にアクセス
