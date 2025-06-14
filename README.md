@@ -49,7 +49,7 @@
 ![terraform init](./images/terraform-init-output-02.png)
 
 
-## EC2インスタンス（aws_instance.web）
+## 2-1. EC2インスタンス（aws_instance.web）
 以下の EC2 インスタンスが作成されます。
 
 | 項目 | 内容 |
@@ -62,7 +62,7 @@
 | タグ | `Name = sre-demo-ec2` |
 | ユーザーデータ | 初期構成スクリプトを使用（Base64 形式でエンコード） |
 
-##  EC2インスタンス（aws_instance.web_2）
+## 2-2. EC2インスタンス（aws_instance.web_2）
 以下の2台目の EC2 インスタンス（Webサーバ）が構築されます。
 
 | 項目 | 内容 |
@@ -76,7 +76,7 @@
 | セキュリティグループ | VPCの設定により適用（詳細は `vpc_security_group_ids` で指定） |
 | サブネット | 指定のVPCサブネットにアタッチされる（`subnet_id`） |
 
-## インターネットゲートウェイ（aws_internet_gateway.igw）
+## 2-3. インターネットゲートウェイ（aws_internet_gateway.igw）
 以下のインターネットゲートウェイ（IGW）が作成されます。
 
 | 項目 | 内容 |
