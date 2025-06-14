@@ -48,47 +48,9 @@
 
 ![terraform init](./images/terraform-init-output-02.png)
 
-
-## 2-1. EC2インスタンス（aws_instance.web）
-以下の EC2 インスタンスが作成されます。
-
-| 項目 | 内容 |
-|------|------|
-| AMI | ami-0c3fd0f5d33134a76（Amazon Linux 系） |
-| インスタンスタイプ | t2.micro（無料利用枠相当） |
-| キーペア名 | your-key-name（変数として外部から指定） |
-| パブリック IP | 自動割り当て（`associate_public_ip_address = true`） |
-| セキュリティグループ | 別リソースにて定義し、アタッチ済み |
-| タグ | `Name = sre-demo-ec2` |
-| ユーザーデータ | 初期構成スクリプトを使用（Base64 形式でエンコード） |
-
-## 2-2. EC2インスタンス（aws_instance.web_2）
-以下の2台目の EC2 インスタンス（Webサーバ）が構築されます。
-
-| 項目 | 内容 |
-|------|------|
-| AMI | ami-0c3fd0f5d33134a76（Amazon Linux系） |
-| インスタンスタイプ | t2.micro（無料枠対象） |
-| キーペア名 | your-key-name（外部から `.tfvars` または `-var` で指定） |
-| パブリックIP | 自動割当（`associate_public_ip_address = true`） |
-| タグ | Name = sre-demo-ec2-2 |
-| ユーザーデータ | 起動時に自動実行される初期化スクリプト（Base64形式） |
-| セキュリティグループ | VPCの設定により適用（詳細は `vpc_security_group_ids` で指定） |
-| サブネット | 指定のVPCサブネットにアタッチされる（`subnet_id`） |
-
-## 2-3. インターネットゲートウェイ（aws_internet_gateway.igw）
-以下のインターネットゲートウェイ（IGW）が作成されます。
-
-| 項目 | 内容 |
-|------|------|
-| リソース名 | aws_internet_gateway.igw |
-| 用途 | パブリックサブネット内のEC2インスタンスがインターネットと通信できるようにするためのゲートウェイ |
-| 紐づくVPC | VPC IDは apply 後に自動設定されます |
-| タグ | Name = sre-demo-igw |
-
-
-
-※より詳細な出力内容はこちらのファイルに保存しています：
+## Terraform plan実行結果について
+本リポジトリに含まれるTerraformの実行計画（plan）の主要な出力結果は、こちらのREADMEにて必要な部分のみ抜粋して記載しています。  
+より詳細な出力内容につきましては、同梱の「plan-result.txt」ファイルに保存しておりますので、そちらをご参照ください。:
 [plan-result.txt](./plan-result.txt)
 
 # 3. 出力されたALBのDNS名にアクセス
