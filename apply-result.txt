@@ -1,0 +1,421 @@
+[0m[1mvar.key_name[0m
+  your-key-name
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_vpc.main: Refreshing state... [id=vpc-0f829382f8e0a817f][0m
+[0m[1maws_internet_gateway.igw: Refreshing state... [id=igw-0fdd0522c63845b72][0m
+[0m[1maws_subnet.public_1: Refreshing state... [id=subnet-0ade489d87cd9237b][0m
+[0m[1maws_subnet.public_2: Refreshing state... [id=subnet-0f03ee630140af7ce][0m
+[0m[1maws_security_group.web_sg: Refreshing state... [id=sg-02366dc427dea2351][0m
+[0m[1maws_lb_target_group.web_tg: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446][0m
+[0m[1maws_route_table.public: Refreshing state... [id=rtb-0167625bb92bca9a0][0m
+[0m[1maws_instance.web: Refreshing state... [id=i-0afb1adb4f7840d46][0m
+[0m[1maws_lb.web_alb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1][0m
+[0m[1maws_instance.web_2: Refreshing state... [id=i-03296f4339eef3169][0m
+[0m[1maws_route_table_association.public_2: Refreshing state... [id=rtbassoc-003dab429de928381][0m
+[0m[1maws_route_table_association.public_1: Refreshing state... [id=rtbassoc-0ed24de37b9e0c4ff][0m
+
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+[0m
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+[1m  # aws_lb.web_alb[0m has changed
+[0m  [33m~[0m[0m resource "aws_lb" "web_alb" {
+      [32m+[0m[0m arn                                         = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1"
+      [32m+[0m[0m dns_name                                    = "sre-demo-alb-2139585380.ap-northeast-1.elb.amazonaws.com"
+        id                                          = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1"
+        name                                        = "sre-demo-alb"
+        tags                                        = {
+            "Name" = "sre-demo-alb"
+        }
+        [90m# (17 unchanged attributes hidden)[0m[0m
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+[31m-[0m/[32m+[0m destroy and then create replacement[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_instance.web[0m is tainted, so must be [1m[31mreplaced[0m
+[0m[31m-[0m/[32m+[0m[0m resource "aws_instance" "web" {
+      [33m~[0m[0m arn                                  = "arn:aws:ec2:ap-northeast-1:960787906606:instance/i-0afb1adb4f7840d46" -> (known after apply)
+      [33m~[0m[0m availability_zone                    = "ap-northeast-1a" -> (known after apply)
+      [33m~[0m[0m cpu_core_count                       = 1 -> (known after apply)
+      [33m~[0m[0m cpu_threads_per_core                 = 1 -> (known after apply)
+      [33m~[0m[0m disable_api_stop                     = false -> (known after apply)
+      [33m~[0m[0m disable_api_termination              = false -> (known after apply)
+      [33m~[0m[0m ebs_optimized                        = false -> (known after apply)
+      [32m+[0m[0m enable_primary_ipv6                  = (known after apply)
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [33m~[0m[0m id                                   = "i-0afb1adb4f7840d46" -> (known after apply)
+      [33m~[0m[0m instance_initiated_shutdown_behavior = "stop" -> (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [33m~[0m[0m instance_state                       = "running" -> (known after apply)
+      [33m~[0m[0m ipv6_address_count                   = 0 -> (known after apply)
+      [33m~[0m[0m ipv6_addresses                       = [] -> (known after apply)
+      [32m+[0m[0m key_name                             = (known after apply)
+      [33m~[0m[0m monitoring                           = false -> (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [33m~[0m[0m placement_partition_number           = 0 -> (known after apply)
+      [33m~[0m[0m primary_network_interface_id         = "eni-0524b9b1a01644576" -> (known after apply)
+      [33m~[0m[0m private_dns                          = "ip-10-0-1-21.ap-northeast-1.compute.internal" -> (known after apply)
+      [33m~[0m[0m private_ip                           = "10.0.1.21" -> (known after apply)
+      [33m~[0m[0m public_dns                           = "ec2-13-230-150-80.ap-northeast-1.compute.amazonaws.com" -> (known after apply)
+      [33m~[0m[0m public_ip                            = "13.230.150.80" -> (known after apply)
+      [33m~[0m[0m secondary_private_ips                = [] -> (known after apply)
+      [33m~[0m[0m security_groups                      = [] -> (known after apply)
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+        tags                                 = {
+            "Name" = "sre-demo-ec2"
+        }
+      [33m~[0m[0m tenancy                              = "default" -> (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m capacity_reservation_specification (known after apply)
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m cpu_options (known after apply)
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 1 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "standard" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m ebs_block_device (known after apply)
+
+      [33m~[0m[0m enclave_options (known after apply)
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m ephemeral_block_device (known after apply)
+
+      [33m~[0m[0m instance_market_options (known after apply)
+
+      [33m~[0m[0m maintenance_options (known after apply)
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m metadata_options (known after apply)
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 1 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "optional" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m network_interface (known after apply)
+
+      [33m~[0m[0m private_dns_name_options (known after apply)
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m root_block_device (known after apply)
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/xvda" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = false [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 100 [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 0 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0d4ab41e61eadc911" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 8 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp2" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+    }
+
+[1m  # aws_instance.web_2[0m is tainted, so must be [1m[31mreplaced[0m
+[0m[31m-[0m/[32m+[0m[0m resource "aws_instance" "web_2" {
+      [33m~[0m[0m arn                                  = "arn:aws:ec2:ap-northeast-1:960787906606:instance/i-03296f4339eef3169" -> (known after apply)
+      [33m~[0m[0m availability_zone                    = "ap-northeast-1c" -> (known after apply)
+      [33m~[0m[0m cpu_core_count                       = 1 -> (known after apply)
+      [33m~[0m[0m cpu_threads_per_core                 = 1 -> (known after apply)
+      [33m~[0m[0m disable_api_stop                     = false -> (known after apply)
+      [33m~[0m[0m disable_api_termination              = false -> (known after apply)
+      [33m~[0m[0m ebs_optimized                        = false -> (known after apply)
+      [32m+[0m[0m enable_primary_ipv6                  = (known after apply)
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [33m~[0m[0m id                                   = "i-03296f4339eef3169" -> (known after apply)
+      [33m~[0m[0m instance_initiated_shutdown_behavior = "stop" -> (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [33m~[0m[0m instance_state                       = "running" -> (known after apply)
+      [33m~[0m[0m ipv6_address_count                   = 0 -> (known after apply)
+      [33m~[0m[0m ipv6_addresses                       = [] -> (known after apply)
+      [32m+[0m[0m key_name                             = (known after apply)
+      [33m~[0m[0m monitoring                           = false -> (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [33m~[0m[0m placement_partition_number           = 0 -> (known after apply)
+      [33m~[0m[0m primary_network_interface_id         = "eni-0f947842278fcd25a" -> (known after apply)
+      [33m~[0m[0m private_dns                          = "ip-10-0-2-241.ap-northeast-1.compute.internal" -> (known after apply)
+      [33m~[0m[0m private_ip                           = "10.0.2.241" -> (known after apply)
+      [33m~[0m[0m public_dns                           = "ec2-3-115-5-140.ap-northeast-1.compute.amazonaws.com" -> (known after apply)
+      [33m~[0m[0m public_ip                            = "3.115.5.140" -> (known after apply)
+      [33m~[0m[0m secondary_private_ips                = [] -> (known after apply)
+      [33m~[0m[0m security_groups                      = [] -> (known after apply)
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+        tags                                 = {
+            "Name" = "sre-demo-ec2-2"
+        }
+      [33m~[0m[0m tenancy                              = "default" -> (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m capacity_reservation_specification (known after apply)
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m cpu_options (known after apply)
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 1 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "standard" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m ebs_block_device (known after apply)
+
+      [33m~[0m[0m enclave_options (known after apply)
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m ephemeral_block_device (known after apply)
+
+      [33m~[0m[0m instance_market_options (known after apply)
+
+      [33m~[0m[0m maintenance_options (known after apply)
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m metadata_options (known after apply)
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 1 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "optional" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m network_interface (known after apply)
+
+      [33m~[0m[0m private_dns_name_options (known after apply)
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [33m~[0m[0m root_block_device (known after apply)
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/xvda" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = false [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 100 [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 0 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0e3033cac8953c388" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 8 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp2" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+    }
+
+[1m  # aws_lb.web_alb[0m is tainted, so must be [1m[31mreplaced[0m
+[0m[31m-[0m/[32m+[0m[0m resource "aws_lb" "web_alb" {
+      [33m~[0m[0m arn                                                          = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1" -> (known after apply)
+      [33m~[0m[0m arn_suffix                                                   = "app/sre-demo-alb/db9069097991a2d1" -> (known after apply)
+      [33m~[0m[0m dns_name                                                     = "sre-demo-alb-2139585380.ap-northeast-1.elb.amazonaws.com" -> (known after apply)
+      [31m-[0m[0m enable_cross_zone_load_balancing                             = true [90m-> null[0m[0m
+      [32m+[0m[0m enforce_security_group_inbound_rules_on_private_link_traffic = (known after apply)
+      [33m~[0m[0m id                                                           = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1" -> (known after apply)
+      [33m~[0m[0m ip_address_type                                              = "ipv4" -> (known after apply)
+        name                                                         = "sre-demo-alb"
+      [32m+[0m[0m name_prefix                                                  = (known after apply)
+        tags                                                         = {
+            "Name" = "sre-demo-alb"
+        }
+      [33m~[0m[0m vpc_id                                                       = "vpc-0f829382f8e0a817f" -> (known after apply)
+      [33m~[0m[0m zone_id                                                      = "Z14GRHDCWA56QT" -> (known after apply)
+        [90m# (18 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m access_logs {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+
+      [31m-[0m[0m connection_logs {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+
+      [33m~[0m[0m subnet_mapping (known after apply)
+      [31m-[0m[0m subnet_mapping {
+          [31m-[0m[0m subnet_id            = "subnet-0ade489d87cd9237b" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+      [31m-[0m[0m subnet_mapping {
+          [31m-[0m[0m subnet_id            = "subnet-0f03ee630140af7ce" [90m-> null[0m[0m
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # aws_lb_listener.web_listener[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb_listener" "web_listener" {
+      [32m+[0m[0m arn                                                                   = (known after apply)
+      [32m+[0m[0m id                                                                    = (known after apply)
+      [32m+[0m[0m load_balancer_arn                                                     = (known after apply)
+      [32m+[0m[0m port                                                                  = 80
+      [32m+[0m[0m protocol                                                              = "HTTP"
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_header_name               = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_issuer_header_name        = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_leaf_header_name          = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_subject_header_name       = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_validity_header_name      = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_tls_cipher_suite_header_name              = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_tls_version_header_name                   = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_credentials_header_value   = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_headers_header_value       = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_methods_header_value       = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_origin_header_value        = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_expose_headers_header_value      = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_max_age_header_value             = (known after apply)
+      [32m+[0m[0m routing_http_response_content_security_policy_header_value            = (known after apply)
+      [32m+[0m[0m routing_http_response_server_enabled                                  = (known after apply)
+      [32m+[0m[0m routing_http_response_strict_transport_security_header_value          = (known after apply)
+      [32m+[0m[0m routing_http_response_x_content_type_options_header_value             = (known after apply)
+      [32m+[0m[0m routing_http_response_x_frame_options_header_value                    = (known after apply)
+      [32m+[0m[0m ssl_policy                                                            = (known after apply)
+      [32m+[0m[0m tags_all                                                              = (known after apply)
+      [32m+[0m[0m tcp_idle_timeout_seconds                                              = (known after apply)
+
+      [32m+[0m[0m default_action {
+          [32m+[0m[0m order            = (known after apply)
+          [32m+[0m[0m target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446"
+          [32m+[0m[0m type             = "forward"
+        }
+
+      [32m+[0m[0m mutual_authentication (known after apply)
+    }
+
+[1m  # aws_lb_target_group_attachment.web_2_attach[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb_target_group_attachment" "web_2_attach" {
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m port             = 80
+      [32m+[0m[0m target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446"
+      [32m+[0m[0m target_id        = (known after apply)
+    }
+
+[1m  # aws_lb_target_group_attachment.web_attach[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb_target_group_attachment" "web_attach" {
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m port             = 80
+      [32m+[0m[0m target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446"
+      [32m+[0m[0m target_id        = (known after apply)
+    }
+
+[1mPlan:[0m 6 to add, 0 to change, 3 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m alb_dns_name = (known after apply)
+[0m[1m
+Do you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_lb.web_alb: Destroying... [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/db9069097991a2d1][0m[0m
+[0m[1maws_instance.web_2: Destroying... [id=i-03296f4339eef3169][0m[0m
+[0m[1maws_instance.web: Destroying... [id=i-0afb1adb4f7840d46][0m[0m
+[0m[1maws_instance.web: Still destroying... [id=i-0afb1adb4f7840d46, 10s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still destroying... [id=arn:aws:elasticloadbalancing:ap-northea...ncer/app/sre-demo-alb/db9069097991a2d1, 10s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still destroying... [id=i-03296f4339eef3169, 10s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Destruction complete after 17s[0m
+[0m[1maws_lb.web_alb: Creating...[0m[0m
+[0m[1maws_instance.web: Still destroying... [id=i-0afb1adb4f7840d46, 20s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still destroying... [id=i-03296f4339eef3169, 20s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.web: Still destroying... [id=i-0afb1adb4f7840d46, 30s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still destroying... [id=i-03296f4339eef3169, 30s elapsed][0m[0m
+[0m[1maws_instance.web: Destruction complete after 31s[0m
+[0m[1maws_instance.web: Creating...[0m[0m
+[0m[1maws_lb.web_alb: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still destroying... [id=i-03296f4339eef3169, 40s elapsed][0m[0m
+[0m[1maws_instance.web: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.web_2: Destruction complete after 41s[0m
+[0m[1maws_instance.web_2: Creating...[0m[0m
+[0m[1maws_lb.web_alb: Still creating... [30s elapsed][0m[0m
+[0m[1maws_instance.web: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.web: Creation complete after 22s [id=i-037eadfca20a6aed2][0m
+[0m[1maws_lb_target_group_attachment.web_attach: Creating...[0m[0m
+[0m[1maws_lb_target_group_attachment.web_attach: Creation complete after 0s [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446-20250614075402146400000003][0m
+[0m[1maws_lb.web_alb: Still creating... [40s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still creating... [20s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [50s elapsed][0m[0m
+[0m[1maws_instance.web_2: Still creating... [30s elapsed][0m[0m
+[0m[1maws_instance.web_2: Creation complete after 32s [id=i-06d507ef49c2f6803][0m
+[0m[1maws_lb_target_group_attachment.web_2_attach: Creating...[0m[0m
+[0m[1maws_lb_target_group_attachment.web_2_attach: Creation complete after 0s [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:targetgroup/sre-demo-tg/906226dc49c5d446-20250614075422394600000004][0m
+[0m[1maws_lb.web_alb: Still creating... [1m0s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [1m10s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [1m20s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [1m30s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [1m40s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [1m50s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m0s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m10s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m20s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m30s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m40s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [2m50s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Still creating... [3m0s elapsed][0m[0m
+[0m[1maws_lb.web_alb: Creation complete after 3m2s [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:loadbalancer/app/sre-demo-alb/8545370fa479b228][0m
+[0m[1maws_lb_listener.web_listener: Creating...[0m[0m
+[0m[1maws_lb_listener.web_listener: Creation complete after 1s [id=arn:aws:elasticloadbalancing:ap-northeast-1:960787906606:listener/app/sre-demo-alb/8545370fa479b228/5c27598fb7420875][0m
+[0m[1m[32m
+Apply complete! Resources: 6 added, 0 changed, 3 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0malb_dns_name = "sre-demo-alb-1301600423.ap-northeast-1.elb.amazonaws.com"
