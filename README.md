@@ -52,6 +52,9 @@ AWS Infrastructure with Terraform
 
 ![terraform init](./images/terraform-init-output-02.png)
 
+※全出力は以下のファイルに記載しています。
+[plan-result.txt](./plan-result.txt)
+
 # 3. aws_instance.web will be createdt
 以下は、 `aws_instance.web` リソース（EC2 インスタンス）を新たに作成する予定であることがわかります。
 主な構成は以下のとおりです：
