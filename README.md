@@ -48,7 +48,7 @@
 
 ![terraform init](./images/terraform-init-output-02.png)
 
-※より詳細な出力内容は以下のファイルに保存しています：
+※より詳細な出力内容はこちらのファイルに保存しています：
 [plan-result.txt](./plan-result.txt)
 
 ## EC2インスタンス（aws_instance.web）
