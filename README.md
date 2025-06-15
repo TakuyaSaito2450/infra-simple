@@ -31,7 +31,7 @@
 
 ---
 
-##（構成図）
+## 構成図
 ![terraform init](./images/terraform-plan-images.png)
 
 ## デプロイ手順
