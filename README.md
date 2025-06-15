@@ -45,7 +45,7 @@
 ここで、使用したい EC2 キーペア名を入力すると、Terraform はリソース作成の計画を出力します。
 その後、表示される計画の一部です（`+ create` は作成予定のリソース）
 
-![terraform init](./images/terraform-init-output-02.png)
+![terraform init](./images/terraform-init-output02.png)
 
 ## Terraform plan実行結果について
 本リポジトリに含まれるTerraformの実行計画（plan）の主要な出力結果は、こちらのREADMEにて必要な部分のみ抜粋して記載しています。  
