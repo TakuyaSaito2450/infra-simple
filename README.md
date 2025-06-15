@@ -32,8 +32,7 @@
 ---
 
 ## 図（構成図）
-※ ここに構成図があるとさらにわかりやすくなります（draw.ioやExcalidrawで作成可）
-
+![terraform init](./images/terraform-plan-images.png)
 
 ## デプロイ手順
 # 1. terraform init
