@@ -1,8 +1,12 @@
-# AWSプロバイダーの設定（Terraformがどのクラウドにデプロイするかを指定）
+# ===============================
+# AWSプロバイダーの設定
+# ===============================
+# Terraformが操作対象とするクラウドプロバイダー（今回はAWS）を指定します。
+# regionパラメータで、リソースを作成するAWSリージョンを指定します。
+# 今回は変数 aws_region（デフォルト値: ap-northeast-1）を参照しています。
 provider "aws" {
-  region = var.aws_region # aws_region 変数の値を参照
+  region = var.aws_region # 使用するAWSリージョン（例: 東京リージョン）を変数から指定
 }
-
 
 # AWS上にVPCを作成
 resource "aws_vpc" "main" {
