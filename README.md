@@ -53,3 +53,4 @@
 [plan-result.txt](./plan-result.txt)
 
 # 3. 出力されたALBのDNS名にアクセス
+以下は、デプロイが完了後、出力にALBのDNS名が表示されました。
