@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   ami               = "ami-0c3fd0f5d33134a76"
   instance_type     = "t2.micro"
   associate_public_ip_address = true
-  key_name          = "your-key-name"
+  key_name          = "your-existing-keypair-name"
   user_data         = "b7ae7d432513168fe0310c5e3e57307300749c5a"
   source_dest_check = true
 
