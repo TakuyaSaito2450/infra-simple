@@ -54,4 +54,4 @@
 
 # 3. 出力されたALBのDNS名にアクセス
 以下は、デプロイが完了後、出力にALBのDNS名が表示されました。
-![terraform init](./images/terraform-apply-dns-images.png)
+
