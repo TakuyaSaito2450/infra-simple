@@ -53,6 +53,6 @@
 [plan-result.txt](./plan-result.txt)
 
 # 3. 出力されたALBのDNS名にアクセス
-以下は、デプロイが完了後、出力にALBのDNS名が表示されました。
+以下は、デプロイが完了後、Nginxが正常に稼働していることを確認できました。
 ![terraform init](./images/terraform-apply-dns-nginx.png)
 
