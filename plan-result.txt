@@ -23,7 +23,7 @@ resource "aws_instance" "web_2" {
   ami                         = "ami-0c3fd0f5d33134a76"
   associate_public_ip_address = true
   instance_type               = "t2.micro"
-  key_name                    = "your-key-name"
+  key_name                    = "your-existing-keypair-name"
   user_data                   = "b7ae7d432513168fe0310c5e3e57307300749c5a"
 
   tags = {
