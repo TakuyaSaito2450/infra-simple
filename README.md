@@ -78,3 +78,6 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 以下は `terraform apply` を実行した際のスクリーンショットです。
 
 ![terraform init](./images/terraform-apply.png)
+
+無事、applyに成功したことを確認できます。※セキュリティの都合上、一部機密情報（キーペア名など）はマスクしています。
+![terraform init](/.images/terraform-apply-complete.png)
