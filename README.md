@@ -9,21 +9,20 @@
 ---
 
 ## インフラ構成
-
-| リソース                 | 内容                                         |
-| -------------------- | ------------------------------------------ |
-| **VPC**              | カスタムVPC（CIDR `10.0.0.0/16`）             |
-| **Subnet**           | パブリックサブネット×2（AZ: `a`, `c`）                 |
-| **Internet Gateway** | VPCをインターネットへ接続                             |
-| **Route Table**      | パブリックサブネットに 0.0.0.0/0 向けルート（IGW経由）         |
-| **Security Group**   | HTTP(80), HTTPS(443), SSH(22)などを許可         |
-| **Key Pair**         | EC2インスタンスへのSSH接続用キー                        |
-| **EC2**              | Amazon Linux 2 + Nginx等インストール済み Webサーバー    |
-| **ALB**              | Application Load Balancer（パブリック向け、マルチAZ構成） |
-| **Target Group**     | EC2インスタンスを登録し、ALBからのトラフィックを受信              |
-| **Listener**         | ALBのHTTPリクエストをターゲットグループに転送                 |
-| **Output**           | ALB DNS名やEC2のIPなど、確認用に出力                   |
-| **Variables**        | 各種パラメータ（リージョン、CIDR、プロジェクト名など）を外部変数化        |
+| リソース           | 概要                                                       |
+|--------------------|------------------------------------------------------------|
+| VPC                | CIDR `10.0.0.0/16` のカスタムVPCを作成                      |
+| Subnet             | パブリックサブネットを2つ作成（AZ: a, c）でマルチAZ構成を意識   |
+| Internet Gateway   | VPCをインターネットに接続するためのIGW                      |
+| Route Table        | IGWへのルート（0.0.0.0/0）を設定し、各サブネットに紐付け        |
+| Security Group     | HTTP(80), HTTPS(443), SSH(22) のインバウンドを許可            |
+| Key Pair           | EC2へSSH接続するための鍵を作成し利用                         |
+| EC2                | Amazon Linux 2（Nginxインストール済み）のWebサーバー         |
+| ALB                | パブリックALBを構成し、リクエストをEC2へ転送                 |
+| Target Group       | EC2インスタンスを登録してALBからのトラフィックを受信         |
+| Listener           | HTTPリクエストをTarget Groupにルーティング                   |
+| Output             | ALBのDNS名、EC2のパブリックIPなどを出力                      |
+| Variables          | リージョンやCIDRなど、変更しやすいように変数として定義         |
 
 ---
 
