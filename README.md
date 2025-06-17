@@ -2,12 +2,19 @@
 
 ## 概要
 このリポジトリは、Terraformを用いてAWS上にNginx Webサーバーを構築するポートフォリオです。IaCスキルとAWSの基本構成に関する理解をアピールする目的で作成しました。
-
+---
 - **目的**: IaCスキルとAWSネットワーク構成の理解を示すためのポートフォリオ  
 - **対象者**: SRE・インフラエンジニア職志望
-
 ---
-
+## 使用技術
+- Terraform v1.x
+- AWS（EC2,VPC,ALB,SGなど）
+- Amazon Linux 2
+- Nginx
+---
+## 構成図
+![terraform init](./images/terraform-plan-images.png)
+---
 ## インフラ構成
 | リソース           | 概要                                                       |
 |--------------------|------------------------------------------------------------|
@@ -23,21 +30,7 @@
 | Listener           | HTTPリクエストをTarget Groupにルーティング                   |
 | Output             | ALBのDNS名、EC2のパブリックIPなどを出力                      |
 | Variables          | リージョンやCIDRなど、変更しやすいように変数として定義         |
-
 ---
-
-## 使用技術
-
-- Terraform v1.x
-- AWS（EC2,VPC,ALB,SGなど）
-- Amazon Linux 2
-- Nginx
-
----
-
-## 構成図
-![terraform init](./images/terraform-plan-images.png)
-
 ## デプロイ手順
 # 1. terraform init
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
