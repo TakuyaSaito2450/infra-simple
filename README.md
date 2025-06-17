@@ -65,7 +65,7 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 
 
 # 2. terraform plan
-以下は `terraform plan` を実行した際の出力結果です。
+以下は `terraform plan` を実行した際の出力結果です。※セキュリティの都合上、一部機密情報（キーペア名など）はマスクしています。
 
 ![terraform init](./images/teraform-plan.png)
 
