@@ -57,7 +57,7 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 
 - **Terraform使用**: IaCの習得と再現性のある構築・破棄を可能にするため。
 ---
-## デプロイ手順
+## セットアップ手順
 # 1. terraform init
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
 ![terraform init](./images/terraform-init-output.png)
