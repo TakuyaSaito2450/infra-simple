@@ -124,4 +124,4 @@ aws_lb_listener.web_listener: Creation complete
 Apply complete! Resources: 6 added, 0 changed, 3 destroyed.
 
 Outputs:
-alb_dns_name = "sre-demo-alb-1301600423.ap-northeast-1.elb.amazonaws.com"
+alb_dns_name = "<ALBのDNS名（例：xxx.ap-northeast-1.elb.amazonaws.com）>"
