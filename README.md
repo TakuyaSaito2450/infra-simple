@@ -74,7 +74,5 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 より詳細な出力内容につきましては、同梱の「plan-result.txt」ファイルに保存しておりますので、こちらをご参照ください。:
 [plan-result.txt](./plan-result.txt)
 
-# 3. 出力されたALBのDNS名にアクセス
-以下は、デプロイが完了後、Nginxが正常に稼働していることを確認できました。
-![terraform init](./images/terraform-apply-dns-nginx.png)
-
+# 3. terraform apply
+以下は `terraform apply` を実行した際のスクリーンショットです。
