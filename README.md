@@ -60,6 +60,7 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 ## セットアップ手順
 # 1. terraform init
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
+
 ![terraform init](./images/terraform-init-output.png)
 
 
