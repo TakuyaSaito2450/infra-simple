@@ -67,6 +67,8 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 # 2. terraform plan
 以下は `terraform plan` を実行した際の出力結果です。
 
+![terraform init](./images/teraform-plan.png)
+
 ## Terraform plan実行結果について
 本リポジトリに含まれるTerraformの実行計画（plan）の主要な出力結果は、こちらのREADMEにて必要な部分のみ抜粋して記載しています。  
 より詳細な出力内容につきましては、同梱の「plan-result.txt」ファイルに保存しておりますので、そちらをご参照ください。:
