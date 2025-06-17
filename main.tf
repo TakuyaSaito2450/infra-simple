@@ -12,17 +12,12 @@ provider "aws" {
 # VPC（仮想プライベートクラウド）の作成
 # ===============================
 resource "aws_vpc" "main" {
-  # このVPC全体のIPアドレス範囲（CIDRブロック）を指定
-  # 変数 vpc_cidr に定義した "10.0.0.0/16" を使用
-  # /16 を指定することで、最大で約6万5千個のIPアドレスが使用可能
-  # （今回は小規模構成だが、学習用途で余裕を持ったCIDRに）
+  # 今回は小規模構成だが、学習用途で余裕を持ったCIDRに
   cidr_block = var.vpc_cidr
 
   # VPC内でDNSによる名前解決を可能にする設定
-  # EC2が「パッケージインストール」などで外部に名前解決するために必要
   enable_dns_support = true
 
-  # EC2インスタンスに自動でDNSホスト名（ec2-xxx.ap-northeast-1.compute.amazonaws.com など）を割り当てる設定
   # 後でSSHやALBで名前解決する場面に役立つため、有効化
   enable_dns_hostnames = true
 
