@@ -76,3 +76,5 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 
 # 3. terraform apply
 以下は `terraform apply` を実行した際のスクリーンショットです。
+
+![terraform init](./images/terraform-apply.png)
