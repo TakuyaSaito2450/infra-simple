@@ -30,7 +30,7 @@
 ## 使用技術
 
 - Terraform v1.x
-- AWS（EC2 / VPC / ALB / SG など）
+- AWS（EC2,VPC,ALB,SGなど）
 - Amazon Linux 2
 - Nginx
 
