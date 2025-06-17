@@ -10,15 +10,20 @@
 
 ## インフラ構成
 
-| リソース         | 内容                                       |
-|------------------|--------------------------------------------|
-| VPC              | カスタムVPC（CIDR: `10.0.0.0/16`）          |
-| Subnet           | パブリックサブネット ×2（AZ: `a`, `c`）     |
-| Internet Gateway | パブリックサブネットに接続                |
-| Route Table      | 0.0.0.0/0 向けのIGWルート設定              |
-| Security Group   | HTTP(80), SSH(22) を許可                   |
-| EC2              | Amazon Linux 2（Nginxインストール済み）    |
-| ALB              | パブリックサブネットに配置し、EC2を登録   |
+| リソース                 | 内容                                         |
+| -------------------- | ------------------------------------------ |
+| **VPC**              | カスタムVPC（例: CIDR `10.0.0.0/16`）             |
+| **Subnet**           | パブリックサブネット×2（AZ: `a`, `c`）                 |
+| **Internet Gateway** | VPCをインターネットへ接続                             |
+| **Route Table**      | パブリックサブネットに 0.0.0.0/0 向けルート（IGW経由）         |
+| **Security Group**   | HTTP(80), HTTPS(443), SSH(22)などを許可         |
+| **Key Pair**         | EC2インスタンスへのSSH接続用キー                        |
+| **EC2**              | Amazon Linux 2 + Nginx等インストール済み Webサーバー    |
+| **ALB**              | Application Load Balancer（パブリック向け、マルチAZ構成） |
+| **Target Group**     | EC2インスタンスを登録し、ALBからのトラフィックを受信              |
+| **Listener**         | ALBのHTTPリクエストをターゲットグループに転送                 |
+| **Output**           | ALB DNS名やEC2のIPなど、確認用に出力                   |
+| **Variables**        | 各種パラメータ（リージョン、CIDR、プロジェクト名など）を外部変数化        |
 
 ---
 
