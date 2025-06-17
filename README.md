@@ -82,3 +82,8 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 無事、applyに成功したことを確認できます。※セキュリティの都合上、一部機密情報（キーペア名など）はマスクしています。
 
 ![terraform init](./images/terraform-apply-complete.png)
+
+# 4. 構築した環境の動作確認
+構築が完了した後、ALBのDNS名にアクセスすることで、Nginxのデフォルトページが表示されることを確認しました。
+
+![terraform init](./images/terraform-dns-nginx.png)
