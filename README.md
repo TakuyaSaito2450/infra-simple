@@ -58,6 +58,7 @@ ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、タ�
 - **Terraform使用**: IaCの習得と再現性のある構築・破棄を可能にするため。
 ---
 ## ディレクトリ構成
+```
 infra-simple/
 ├── main.tf          # インフラ全体のリソース定義ファイル（VPC、EC2、ALBなど）
 ├── variables.tf     # 変数定義ファイル（パラメータ化して再利用性を高める）
@@ -65,6 +66,7 @@ infra-simple/
 ├── plan-result.txt  # `terraform plan` 実行結果のログ（変更内容の確認用）
 ├── apply-result.txt # `terraform apply` 実行結果のログ（適用内容の記録用）
 └── README.md        # プロジェクトの概要・構成・使い方などを記載したドキュメント
+```
 
 ---
 ## セットアップ手順
