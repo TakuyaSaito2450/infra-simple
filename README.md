@@ -103,10 +103,16 @@ infra-simple/
 ## 動作確認
 
 ### VPC構成の確認（AWS CLI）
-以下のコマンドで作成したVPCが正しく作成され、意図したCIDRブロックとタグが設定されていることを確認しました。
+以下は `aws ec2 describe-vpcs --filters "Name=cidr,Values=xxx"` を実行した際のスクリーンショットです。
+VPCが正しく作成され、意図したCIDRブロックとタグが設定されていることを確認しました。
 
 ![terraform init](./images/terrafodm-vpc.png)
 
 ### IGW構成の確認（AWS CLI）
+以下は `terraform init` を実行した際のスクリーンショットです。
 以下のコマンドで作成したIGWが正しく作成され、意図したIGWとタグが設定されていることを確認しました。
 ![terraform init](./images/terraform-igw.png)
+
+### Route Tableの構成確認（AWS CLI）
+以下のコマンドで作成したIGWが正しく作成され、意図したIGWとタグが設定されていることを確認しました。
+![terraform init](./images/terraform-Route_Table.png)
