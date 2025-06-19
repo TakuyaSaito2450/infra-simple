@@ -100,7 +100,7 @@ infra-simple/
 
 ![terraform init](./images/terraform-dns-nginx.png)
 
-## VPCの接続確認
+## 動作確認
 
 ### VPC構成の確認（AWS CLI）
 
