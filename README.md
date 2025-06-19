@@ -105,7 +105,7 @@ infra-simple/
 ### VPC構成の確認（AWS CLI）
 VPCが `10.0.0.0/16` で正しく作成されていることを確認しました。
 詳細なコマンド出力は以下のファイルに記載しています：
-
+[outputs-result.txt](./outputs/vpc-result.txt)
 
 ### IGW構成の確認（AWS CLI）
 以下は `aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-xxx"` を実行した際のスクリーンショットです。
