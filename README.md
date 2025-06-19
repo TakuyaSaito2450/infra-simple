@@ -103,3 +103,4 @@ infra-simple/
 ## 動作確認
 
 ### VPC構成の確認（AWS CLI）
+![terraform init](./images/terrafodm-vpc.png)
