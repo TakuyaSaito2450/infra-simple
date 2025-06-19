@@ -99,3 +99,10 @@ infra-simple/
 構築が完了した後、ALBのDNS名にアクセスすることで、Nginxのデフォルトページが表示されることを確認しました。
 
 ![terraform init](./images/terraform-dns-nginx.png)
+
+## VPCの接続確認
+
+### VPC構成の確認（AWS CLI）
+
+```bash
+$ aws ec2 describe-vpcs --filters "Name=cidr,Values=10.0.0.0/16"
