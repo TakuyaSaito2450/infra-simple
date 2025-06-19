@@ -114,6 +114,7 @@ IGWが正しく作成され、意図したIGWとタグが設定されている�
 ![terraform init](./images/terraform-igw.png)
 
 ### Route Tableの構成確認（AWS CLI）
-以下は `aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx"` を実行した際のスクリーンショットです。
-Route Tableが正しく作成され、意図したルートテーブルとタグが設定されていることを確認しました。
+以下は`aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx"`を実行した際のスクリーンショットです。
+作成されたルートテーブルが、指定したVPCに正しく関連付けられており、意図したルート（例: 0.0.0.0/0 → IGW）およびタグが設定されていることを確認しました。
+
 ![terraform init](./images/terraform-Route_Table.png)
