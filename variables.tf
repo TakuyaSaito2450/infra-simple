@@ -4,6 +4,7 @@ variable "project_name" {
   default     = "sre-demo"
 }
 
+# Terraformで使用するAWSリージョンを変数として定義
 variable "aws_region" {
   description = "AWSリージョン"
   type        = string
