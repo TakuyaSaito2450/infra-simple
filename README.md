@@ -103,4 +103,6 @@ infra-simple/
 ## 動作確認
 
 ### VPC構成の確認（AWS CLI）
+以下のコマンドで作成したVPCが正しく作成され、意図したCIDRブロックとタグが設定されていることを確認しました。
+
 ![terraform init](./images/terrafodm-vpc.png)
