@@ -103,6 +103,3 @@ infra-simple/
 ## 動作確認
 
 ### VPC構成の確認（AWS CLI）
-
-```bash
-$ aws ec2 describe-vpcs --filters "Name=cidr,Values=10.0.0.0/16"
