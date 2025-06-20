@@ -1,11 +1,11 @@
 {
     "Vpcs": [
         {
-            "OwnerId": "123456789012", // マスキング済み
+            "OwnerId": "***masked***",
             "InstanceTenancy": "default",
             "CidrBlockAssociationSet": [
                 {
-                    "AssociationId": "vpc-cidr-assoc-xxxxxxxxxxxxxxxx" // マスキング済み
+                    "AssociationId": "***masked***",
                     "CidrBlock": "10.0.0.0/16",
                     "CidrBlockState": {
                         "State": "associated"
@@ -22,10 +22,10 @@
             "BlockPublicAccessStates": {
                 "InternetGatewayBlockMode": "off"
             },
-            "VpcId": "vpc-xxxxxxxxxxxxxxxxx", // マスキング済み
+            "VpcId": "***masked***",
             "State": "available",
             "CidrBlock": "10.0.0.0/16",
-            "DhcpOptionsId": "dopt-xxxxxxxx" // マスキング済み
+            "DhcpOptionsId": "***masked***",
         }
     ]
 }
