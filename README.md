@@ -128,3 +128,8 @@ aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-
 詳細なコマンド出力は以下のファイルに記載しています：
 
 [sg-result.txt](./outputs/sg-result.txt)
+
+
+## 今後の構成予定
+- プライベートサブネットを使ったRDS構成。
+- CloudWatchによるログ監視の自動化を組む。
