@@ -1,0 +1,59 @@
+{
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-0fff1038e65c6f39c",
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "sre-demo-web-sg"
+                }
+            ],
+            "VpcId": "vpc-0d65ee3e36feace9f",
+            "SecurityGroupArn": "arn:aws:ec2:ap-northeast-1:960787906606:security-group/sg-0fff1038e65c6f39c",
+            "OwnerId": "960787906606",
+            "GroupName": "sre-demo-web-sg",
+            "Description": "Managed by Terraform",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 80,
+                    "ToPort": 80,
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                },
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 22,
+                    "ToPort": 22,
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ]
+        }
+    ]
+}
