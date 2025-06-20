@@ -4,11 +4,11 @@
             "Attachments": [
                 {
                     "State": "available",
-                    "VpcId": "vpc-0d65ee3e36feace9f"
+                    "VpcId": "vpc-xxxxxxxxxxxxxxxxx" // マスキング済み
                 }
             ],
-            "InternetGatewayId": "igw-00054fe713a931c81",
-            "OwnerId": "960787906606",
+            "InternetGatewayId": "igw-xxxxxxxxxxxxxxxxx", // マスキング済み
+            "OwnerId": "************", // マスキング済み
             "Tags": [
                 {
                     "Key": "Name",
