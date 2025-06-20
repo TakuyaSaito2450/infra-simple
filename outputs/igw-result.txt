@@ -1,0 +1,20 @@
+{
+    "InternetGateways": [
+        {
+            "Attachments": [
+                {
+                    "State": "available",
+                    "VpcId": "vpc-0d65ee3e36feace9f"
+                }
+            ],
+            "InternetGatewayId": "igw-00054fe713a931c81",
+            "OwnerId": "960787906606",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "sre-demo-igw"
+                }
+            ]
+        }
+    ]
+}
