@@ -51,7 +51,7 @@ EC2インスタンスにSSHで接続する仕組みを体験的に理解する�
 ALBとEC2間のトラフィック振り分けの仕組みを学ぶため、ターゲットグループを使用してEC2を登録しました。ロードバランサーとバックエンド間の連携構成の基本を意識しています。
 
 - **Terraform使用**: IaCの習得と再現性のある構築・破棄を可能にするため。
----
+
 ## ディレクトリ構成
 ```
 infra-simple/
@@ -63,13 +63,11 @@ infra-simple/
 └── README.md        # プロジェクトの概要・構成・使い方などを記載したドキュメント
 ```
 
----
 ## セットアップ手順
 # 1. terraform init
 以下は `terraform init` を実行した際のスクリーンショットです。初期化が正常に完了したことが確認できます。
 
 ![terraform init](./images/terraform-init-output.png)
-
 
 # 2. terraform plan
 以下は `terraform plan` を実行した際の出力結果です。※セキュリティの都合上、一部機密情報（キーペア名など）はマスクしています。
@@ -99,7 +97,7 @@ infra-simple/
 
 ### VPC構成の確認（AWS CLI）
 以下のコマンドを使用して、VPCが `10.0.0.0/16` で正しく作成されていることを確認しました。
-```bash
+```
 aws ec2 describe-vpcs --filters "Name=cidr,Values=10.0.0.0/16" > outputs/vpc-result.txt
 ``` 
 詳細なコマンド出力は以下のファイルに記載しています：
@@ -108,7 +106,7 @@ aws ec2 describe-vpcs --filters "Name=cidr,Values=10.0.0.0/16" > outputs/vpc-res
 
 ### IGW構成の確認（AWS CLI）
 以下のコマンドを使用して、Internet Gatewayが指定のVPCに正しくアタッチされていることを確認しました。
-``` bash
+``` 
 aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-***" > outputs/igw-result.txt
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
@@ -117,7 +115,7 @@ aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-
 
 ### Route Tableの構成確認（AWS CLI）
 以下のコマンドを使用して、作成されたルートテーブルが、指定したVPCに正しく関連付けられており、意図したルートおよびタグが設定されていることを確認しました。
-``` bash
+```
 aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx" > outputs/route-table.txt
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
@@ -126,10 +124,9 @@ aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx" > outputs/r
 
 ### Security Group構成確認（AWS CLI）
 以下のコマンドを使用して、作成されたセキュリティグループが、指定したVPCに正しく関連付けられており、意図したインバウンド／アウトバウンドルール（HTTP, SSH 等）やタグが設定されていることを確認しました。
-``` bash
+``` 
 aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-sg"
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
 
 [sg-result.txt](./outputs/sg-result.txt)
-
