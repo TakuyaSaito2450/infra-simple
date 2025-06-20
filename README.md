@@ -114,7 +114,7 @@ aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
 
-[outputs-result.txt](./outputs/igw-result.txt)
+[igw-result.txt](./outputs/igw-result.txt)
 
 ### Route Tableの構成確認（AWS CLI）
 以下は`aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx"`を実行した際のスクリーンショットです。
