@@ -121,10 +121,13 @@ aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-
 [igw-result.txt](./outputs/igw-result.txt)
 
 ### Route Tableの構成確認（AWS CLI）
-以下は`aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx"`を実行した際のスクリーンショットです。
-作成されたルートテーブルが、指定したVPCに正しく関連付けられており、意図したルートおよびタグが設定されていることを確認しました。
+以下のコマンドを使用して、作成されたルートテーブルが、指定したVPCに正しく関連付けられており、意図したルートおよびタグが設定されていることを確認しました。
+``` bash
+aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx" > outputs/route-table.txt
+```
+詳細なコマンド出力は以下のファイルに記載しています：
 
-![terraform init](./images/terraform-Route_Table.png)
+[route-table.txt](./outputs/route-table.txt)
 
 ### Security Group構成確認（AWS CLI）
 以下は`aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-sg"`を実行した際のスクリーンショットです。
