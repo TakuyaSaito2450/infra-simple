@@ -103,9 +103,13 @@ infra-simple/
 ## 動作確認
 
 ### VPC構成の確認（AWS CLI）
-VPCが `10.0.0.0/16` で正しく作成されていることを確認しました。
+以下のコマンドを使用して、VPCが `10.0.0.0/16` で正しく作成されていることを確認しました。
+```bash
+aws ec2 describe-vpcs --filters "Name=cidr,Values=10.0.0.0/16" > outputs/vpc-result.txt
+``` 
 詳細なコマンド出力は以下のファイルに記載しています：
-[outputs-result.txt](./outputs/vpc-result.txt)
+
+[vpc-result.txt](./outputs/vpc-result.txt)
 
 ### IGW構成の確認（AWS CLI）
 以下のコマンドを使用して、Internet Gatewayが指定のVPCに正しくアタッチされていることを確認しました。
