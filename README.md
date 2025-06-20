@@ -108,9 +108,12 @@ VPCが `10.0.0.0/16` で正しく作成されていることを確認しまし�
 [outputs-result.txt](./outputs/vpc-result.txt)
 
 ### IGW構成の確認（AWS CLI）
-以下は `aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-xxx"` を実行した際のスクリーンショットです。
-IGWが正しく作成され、意図したIGWとタグが設定されていることを確認しました。
-![terraform init](./images/terraform-igw.png)
+以下のコマンドを使用して、Internet Gatewayが指定のVPCに正しくアタッチされていることを確認しました。
+``` bash
+aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-***" > outputs/igw-result.txt
+```
+詳細なコマンド出力は以下のファイルに記載しています：
+[outputs-result.txt](./outputs/igw-result.txt)
 
 ### Route Tableの構成確認（AWS CLI）
 以下は`aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx"`を実行した際のスクリーンショットです。
