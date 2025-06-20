@@ -6,7 +6,7 @@
 - AWS（EC2,VPC,ALB,SGなど）
 - Amazon Linux 2
 - Nginx
----
+
 ## 構成図
 ![terraform init](./images/terraform-plan-images.png)
 
@@ -25,7 +25,7 @@
 | Listener           | HTTPリクエストをTarget Groupにルーティング                   |
 | Output             | ALBのDNS名、EC2のパブリックIPなどを出力                      |
 | Variables          | リージョンやCIDRなど、変更しやすいように変数として定義         |
----
+
 ## なぜこの構成にしたか
 この構成は、以下のような理由で設計しました：
 
