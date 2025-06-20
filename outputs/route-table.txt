@@ -4,15 +4,15 @@
             "Associations": [
                 {
                     "Main": true,
-                    "RouteTableAssociationId": "rtbassoc-0ced9e2779a5adf5a",
-                    "RouteTableId": "rtb-00041158309e70973",
+                    "RouteTableAssociationId": "***masked***",
+                    "RouteTableId": "***masked***",
                     "AssociationState": {
                         "State": "associated"
                     }
                 }
             ],
             "PropagatingVgws": [],
-            "RouteTableId": "rtb-00041158309e70973",
+            "RouteTableId": "***masked***",
             "Routes": [
                 {
                     "DestinationCidrBlock": "10.0.0.0/16",
@@ -22,32 +22,32 @@
                 }
             ],
             "Tags": [],
-            "VpcId": "vpc-0d65ee3e36feace9f",
-            "OwnerId": "960787906606"
+            "VpcId": "***masked***",
+            "OwnerId": "***masked***",
         },
         {
             "Associations": [
                 {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-0690db3820c773608",
-                    "RouteTableId": "rtb-034e43f1411889015",
-                    "SubnetId": "subnet-0c4b8ac1b66215a17",
+                    "RouteTableAssociationId": "***masked***",
+                    "RouteTableId": "***masked***",
+                    "SubnetId": "***masked***",
                     "AssociationState": {
                         "State": "associated"
                     }
                 },
                 {
                     "Main": false,
-                    "RouteTableAssociationId": "rtbassoc-0373672cea5c1ca9f",
-                    "RouteTableId": "rtb-034e43f1411889015",
-                    "SubnetId": "subnet-0380fad2fb46b9826",
+                    "RouteTableAssociationId": "***masked***",
+                    "RouteTableId": "***masked***",
+                    "SubnetId": "***masked***",
                     "AssociationState": {
                         "State": "associated"
                     }
                 }
             ],
             "PropagatingVgws": [],
-            "RouteTableId": "rtb-034e43f1411889015",
+            "RouteTableId": "***masked***",
             "Routes": [
                 {
                     "DestinationCidrBlock": "10.0.0.0/16",
@@ -57,7 +57,7 @@
                 },
                 {
                     "DestinationCidrBlock": "0.0.0.0/0",
-                    "GatewayId": "igw-00054fe713a931c81",
+                    "GatewayId": "***masked***",
                     "Origin": "CreateRoute",
                     "State": "active"
                 }
@@ -68,8 +68,8 @@
                     "Value": "sre-demo-rt"
                 }
             ],
-            "VpcId": "vpc-0d65ee3e36feace9f",
-            "OwnerId": "960787906606"
+            "VpcId": "***masked***",
+            "OwnerId": "***masked***",
         }
     ]
 }
