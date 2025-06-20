@@ -1,6 +1,7 @@
 # AWS Infrastructure with Terraform
 
 ## 概要
+
 このリポジトリは、Terraformを用いてAWS上にNginx Webサーバーを構築するポートフォリオです。IaCスキルとAWSの基本構成に関する理解をアピールする目的で作成しました。
 ---
 ## 使用技術
