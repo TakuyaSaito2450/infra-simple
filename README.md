@@ -130,5 +130,11 @@ aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxx" > outputs/r
 [route-table.txt](./outputs/route-table.txt)
 
 ### Security Group構成確認（AWS CLI）
-以下は`aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-sg"`を実行した際のスクリーンショットです。
-作成されたセキュリティグループが、指定した VPC に正しく関連付けられており、意図したインバウンド／アウトバウンドルール（HTTP, SSH 等）やタグが設定されていることを確認しました。
+以下のコマンドを使用して、作成されたセキュリティグループが、指定したVPCに正しく関連付けられており、意図したインバウンド／アウトバウンドルール（HTTP, SSH 等）やタグが設定されていることを確認しました。
+``` bash
+aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-sg"
+```
+詳細なコマンド出力は以下のファイルに記載しています：
+
+[sg-table.txt](./outputs/sg-result.txt)
+
