@@ -113,6 +113,7 @@ VPCが `10.0.0.0/16` で正しく作成されていることを確認しまし�
 aws ec2 describe-internet-gateways --filters "Name=attachment.vpc-id,Values=vpc-***" > outputs/igw-result.txt
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
+
 [outputs-result.txt](./outputs/igw-result.txt)
 
 ### Route Tableの構成確認（AWS CLI）
