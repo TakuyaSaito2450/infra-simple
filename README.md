@@ -1,6 +1,6 @@
 ## 概要 
 このリポジトリは、Terraformを用いてAWS上にNginxを構築するポートフォリオです。IaCスキルとAWSの基本構成に関する理解をアピールする目的で作成しました。
----
+
 ## 使用技術
 - Terraform v1.x
 - AWS（EC2,VPC,ALB,SGなど）
