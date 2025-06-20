@@ -136,5 +136,5 @@ aws ec2 describe-security-groups --filters "Name=group-name,Values=sre-demo-web-
 ```
 詳細なコマンド出力は以下のファイルに記載しています：
 
-[sg-table.txt](./outputs/sg-result.txt)
+[sg-result.txt](./outputs/sg-result.txt)
 
