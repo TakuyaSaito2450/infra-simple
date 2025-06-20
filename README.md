@@ -7,7 +7,7 @@
 - Amazon Linux 2
 - Nginx
 
-## 構成図
+## AWS構成図
 ![terraform init](./images/terraform-plan-images.png)
 
 ## インフラ構成
